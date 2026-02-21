@@ -1,0 +1,48 @@
+/* ── Bottom Navigation ────────────────────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 18px;
+  z-index: 100;
+}
+
+.bottom-nav__btn {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: transform 0.15s;
+}
+
+.bottom-nav__btn:hover {
+  transform: scale(1.1);
+}
+
+/* Centre "+" post button */
+.bottom-nav__post-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -12px;
+  box-shadow: var(--shadow-fab);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.bottom-nav__post-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

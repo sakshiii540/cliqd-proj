@@ -1,0 +1,58 @@
+/* ── Navbar ───────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 244, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  color: var(--color-black);
+  user-select: none;
+}
+
+.navbar__logo span {
+  color: var(--color-accent);
+  -webkit-text-stroke: 1px var(--color-black);
+}
+
+.navbar__actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.navbar__icon-btn {
+  padding: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: background 0.15s;
+}
+
+.navbar__icon-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.navbar__notif-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-red);
+  border: 1.5px solid var(--color-bg);
+}

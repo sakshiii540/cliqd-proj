@@ -1,0 +1,59 @@
+/* ── Product Tag (floating dot + tooltip on image) ── */
+.product-tag {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition: opacity 0.2s ease;
+}
+
+.product-tag--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-tag--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.product-tag__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse-dot 2s infinite;
+  position: relative;
+}
+
+.product-tag__tooltip {
+  position: absolute;
+  left: 50%;
+  top: -56px;
+  transform: translateX(-50%);
+  background: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: var(--shadow-tag);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.product-tag__name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+}
+
+.product-tag__brand-price {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
